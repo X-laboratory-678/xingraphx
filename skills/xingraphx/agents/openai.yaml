@@ -1,0 +1,4 @@
+interface:
+  display_name: "XinGraphX"
+  short_description: "从样图或文字制作科研图，交付原生可编辑 PPTX 与高清 PNG"
+  default_prompt: "使用 $xingraphx，根据我提供的参考图或文字制作科研图，交付可编辑 PPTX 和高清 PNG，并完成渲染复检。"
