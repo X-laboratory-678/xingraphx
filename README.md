@@ -93,8 +93,8 @@ skills/xingraphx/
 
 欢迎通过 Issue 报告问题，或通过 Pull Request 改进工作流与验收规范。复现绘图问题时，请提供可公开的输入、预期效果、实际输出及渲染环境；分享参考图前请确认具有公开权限。
 
-## 致谢与许可
+## 许可
 
-本仓库的项目介绍与安装文档组织方式参考了 [nature-skills](https://github.com/Yuan1z0825/nature-skills)。XinGraphX 的技能内容来自本仓库维护者提供的技能文件。
+XinGraphX 的技能内容来自本仓库维护者提供的技能文件。
 
 本项目采用 [MIT License](LICENSE)。用户输入的参考图、论文和第三方素材遵循各自的授权条款。

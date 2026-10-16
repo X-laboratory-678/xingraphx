@@ -56,6 +56,6 @@ PowerPoint rendering is preferred. When another renderer is used, record it and 
 
 Issues and pull requests are welcome. For reproducible reports, provide shareable input, expected behavior, actual output and renderer details.
 
-Documentation organization was inspired by [nature-skills](https://github.com/Yuan1z0825/nature-skills). The skill files were supplied by this repository's maintainer.
+The skill files were supplied by this repository's maintainer.
 
 Released under the [MIT License](LICENSE). Third-party reference figures, papers and assets retain their respective licenses.
