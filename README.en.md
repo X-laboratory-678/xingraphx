@@ -1,6 +1,8 @@
-# XinGraphX
+# 万象归鑫 · XinGraphX
 
-**Turn reference images and research descriptions into editable scientific figures.**
+**科研万象，一绘归鑫。**
+
+Turn reference images and research descriptions into editable scientific figures.
 
 [中文](README.md) · [Skill instructions](skills/xingraphx/SKILL.md) · [MIT License](LICENSE)
 
