@@ -28,6 +28,12 @@ Generation within this scope proceeds without per-asset approval. Assets default
 
 Allow at most one targeted generation correction per asset. If quality remains inadequate or generation tools are unavailable, continue independent work and report affected assets together for the user to choose an alternative. Do not silently substitute inaccurate simplified icons. Check scientific structure and appearance in the final PPTX at display size; pixel-identical reproduction is not promised.
 
+## Edit continuous text as a block
+
+Use one native text box for a continuous paragraph, list or explanatory block within a node, rather than one box per displayed line. Keep size, weight and color changes as local text formatting. Small inline font changes, such as English terms within Chinese text, stay in the same box; separate blocks with different font families use separate boxes.
+
+Do not merge across nodes, panels, columns or independently positioned regions. Keep titles, figure captions, tick labels, legend entries and standalone annotations separate. Use paragraphs, line spacing, indentation and text-box dimensions instead of space padding or grouping multiple boxes. Check wrapping, overflow, font substitution and alignment after merging; preserve native equation structures.
+
 ## Installation
 
 ```bash
