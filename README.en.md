@@ -34,6 +34,14 @@ Use one native text box for a continuous paragraph, list or explanatory block wi
 
 Do not merge across nodes, panels, columns or independently positioned regions. Keep titles, figure captions, tick labels, legend entries and standalone annotations separate. Use paragraphs, line spacing, indentation and text-box dimensions instead of space padding or grouping multiple boxes. Check wrapping, overflow, font substitution and alignment after merging; preserve native equation structures.
 
+## Speaker notes for presentations
+
+When a task includes a talk, lecture, defense or report deck, automatically write a complete, natural spoken script in every slide's native PowerPoint notes, beginning with a suggested duration. Explain the slide and its charts, connect adjacent slides, and include brief scripts for covers, agendas and transitions. Give key charts and conclusions more time according to their importance and difficulty.
+
+Ask for the speaking duration if it is missing, and wait for it before finalizing the scripts. Treat the stated duration as speaking time unless it explicitly includes Q&A; deduct included Q&A first, then reserve about 10% for pauses and slide changes. For Chinese, estimate around 220 characters per minute and slow down for technical material. Use a suitable estimate for other spoken languages. Timing estimates do not guarantee live delivery duration.
+
+When editing a deck, retain applicable existing narration and adjust it to the revised slides and timing. Preserve sources and schematic-data disclosures as separate paragraphs, excluding them from spoken-length estimates. Read back the saved notes to verify completeness, slide order and the overall timing budget. Standalone scientific figures retain their existing workflow; explicit requests for graphics-only work or no scripts take precedence.
+
 ## Installation
 
 ```bash
@@ -59,6 +67,14 @@ Use xingraphx to draw a technical roadmap:
 data collection → cleaning → feature extraction → training → evaluation.
 Use a compact academic layout with a white background.
 Deliver editable PPTX and high-resolution PNG files.
+```
+
+For a talk, specify the duration, for example:
+
+```text
+Use xingraphx to refine this academic presentation for a 20-minute talk, with Q&A separate.
+Write a complete spoken script in every slide's native notes, beginning with a suggested duration.
+Allocate time by importance and difficulty, preserve sources and disclosures, and verify the saved notes.
 ```
 
 ## Requirements and scope
