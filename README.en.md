@@ -2,7 +2,7 @@
 
 **科研万象，一绘归鑫。**
 
-Turn reference images and research descriptions into scientific figures with native editable structures and generated illustration assets where needed.
+Reconstruct scientific figures with template fidelity as the highest goal: keep text and simple structures native and generate every pictorial icon and illustration immediately.
 
 [中文](README.md) · [Skill instructions](skills/xingraphx/SKILL.md) · [MIT License](LICENSE)
 
@@ -10,23 +10,29 @@ XinGraphX is an AI Agent skill for scientific schematics, workflows, mechanism d
 
 ## Features
 
-- Reconstruct reference figures while preserving panel structure, colors and visual relationships.
+- Faithfully reconstruct template layout, background, positions, proportions, spacing, hierarchy, colors and visual relationships; flag issues before changing them.
 - Organize research descriptions into compact, readable academic layouts.
 - Build text, connecting arrows, node frames, data charts, axes and schematic curves as native editable PowerPoint objects; handle icons inside nodes separately.
 - Use native Office Math for equations, preserving fractions and subscripts.
-- Generate illustrations and appearance-focused icons when native shapes cannot reproduce them well, and insert them as separate, movable image assets.
+- Generate every pictorial icon and illustration immediately, including simple ones, and insert each as a separate, movable image asset.
 - Inspect the saved PPTX structure and actual rendered output before delivery.
 - Export PNGs with a long edge of at least 3600 pixels; meet 300 dpi pixel requirements when physical dimensions are specified.
 
 These are workflow requirements. Actual results depend on the Agent's tools, fonts and renderer; verification records must describe what was actually checked.
 
-## Choosing the right drawing method
+## Generate pictorial assets immediately
 
-Generate instruments, organs, cells, material illustrations and icons directly when their appearance relies on texture, three-dimensional lighting, irregular contours or complex details. Other appearance assets may receive one native draft and one correction round. If contours, perspective, proportions, colors or key details still visibly differ at the final display size, switch to image generation instead of repeatedly assembling shapes.
+Generate equipment, suns, battery appearances, people, organs and other pictorial icons or illustrations immediately, regardless of apparent simplicity. Do not first assemble them from PowerPoint shapes, SVG or programmatic drawings. Keep text, Office Math equations, data charts, axes, curves, standard scientific symbols, abstract nodes, points, lines, areas and arrows native and editable. A standard battery circuit symbol can be native; a pictorial battery icon must be generated. Purely abstract workflows do not need image generation.
 
-Generation within this scope proceeds without per-asset approval. Assets default to transparent backgrounds without text. Keep text, equations, data charts, node frames and process connections native. Images can be moved or replaced, but their internal details are not individually editable. Do not rasterize an entire slide or workflow, or use cropped reference images as reconstructed assets. Explicit requests for fully native output take precedence; report capability limits when necessary.
+Generation proceeds without per-asset approval. Use the corresponding template region to guide each asset's contour, perspective, proportions, colors and key details. Assets default to transparent backgrounds without text; keep labels, node frames and connections separate. Images can be moved or replaced, but their internal details are not individually editable. Do not rasterize an entire slide, workflow or large panel, or deliver cropped template regions as reconstructed assets. Crops may be used as generation references only.
 
-Allow at most one targeted generation correction per asset. If quality remains inadequate or generation tools are unavailable, continue independent work and report affected assets together for the user to choose an alternative. Do not silently substitute inaccurate simplified icons. Check scientific structure and appearance in the final PPTX at display size; pixel-identical reproduction is not promised.
+After the first generation, allow at most three targeted correction rounds per asset, for a maximum of four generations; stop once it meets the target. Record specific differences at each round. If significant differences remain or generation tools are unavailable, keep the best candidate, continue independent work and ask the user to decide on the unresolved differences. Do not fall back to shape-based drawings or mark an inadequate asset as passed. Explicit requests for fully native output take precedence; explain conflicts and confirm the tradeoff.
+
+## Template fidelity
+
+Perfect reconstruction is the highest goal for reference tasks. Preserve the template's layout, background, positions, proportions, spacing, hierarchy, colors and visual relationships. Do not independently beautify, restyle or rearrange it. Flag typos, occlusion or scientific issues for the user to decide before changing them. Tasks based only on text retain the existing content-led layout approach.
+
+Compare the final PPT rendering with the template side by side and, when useful, as an overlay. Check the whole composition, then inspect each asset's contour, perspective, proportions, colors, transparency edges, key details and scientific structure at its final display size. Record remaining differences; generation or export success alone is not proof of perfect reconstruction.
 
 ## Edit continuous text as a block
 
@@ -58,7 +64,8 @@ Alternatively, ask your Agent to read `skills/xingraphx/SKILL.md` from the local
 Use xingraphx to reconstruct this reference figure.
 Preserve the panel layout, colors and arrow relationships.
 Use native editable objects for text, equations, node frames and curves.
-Generate difficult illustrations and icons as separate assets; keep labels and connections editable.
+Generate every pictorial icon and illustration immediately as a separate asset; do not first try shapes.
+Keep labels and connections editable, preserve the template background and layout, and compare the final PPT rendering with the reference.
 Deliver a single-slide PPTX and a high-resolution PNG, with structural and rendered checks.
 ```
 
@@ -79,11 +86,11 @@ Allocate time by importance and difficulty, preserve sources and disclosures, an
 
 ## Requirements and scope
 
-The repository contains skill instructions and acceptance criteria. The host Agent needs file access, PPTX creation/editing, rendering and PNG export capabilities. Illustrations and icons that cannot be reproduced well with native shapes need image generation; simple workflows do not. If available, the skill uses the host's presentation and image-generation skills; those tools and skills are not bundled here.
+The repository contains skill instructions and acceptance criteria. The host Agent needs file access, PPTX creation/editing, rendering and PNG export capabilities. Every pictorial icon and illustration requires image generation; purely geometric workflows and standard scientific symbols do not. If available, the skill uses the host's presentation and image-generation skills; those tools and skills are not bundled here. Preserve template backgrounds in reference tasks; text-only tasks default to white.
 
 Complex illustrations remain separate image assets. Three-dimensional trajectories default to editable two-dimensional projections. Missing experimental data must never be fabricated; schematic data must be identified in slide notes and delivery records. Inserting figures into Word or merging existing figure collections is outside this skill's scope.
 
-PowerPoint rendering is preferred. When another renderer is used, record it and identify checks that remain unverified. Keep build scripts, assets, reasons for generation or switching, correction counts, final-size checks and content corrections with the deliverables. Identify native objects and image assets in the delivery notes.
+PowerPoint rendering is preferred. When another renderer is used, record it and identify checks that remain unverified. Keep build scripts, assets, native/generated responsibilities, reference regions, per-round differences, correction counts, final-size checks and confirmed content corrections with the deliverables. Identify native objects and image assets in the delivery notes.
 
 ## Contributing and license
 
